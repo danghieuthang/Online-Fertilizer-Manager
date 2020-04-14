@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0C3C9F07-1A45-460B-8AC4-43BFB8FFFB75}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GUI</RootNamespace>
+    <AssemblyName>GUI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=5.12.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.12.1\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Accounts\frm_Accounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounts\frm_Accounts.Designer.cs">
+      <DependentUpon>frm_Accounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accounts\frm_MaintainAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounts\frm_MaintainAccount.Designer.cs">
+      <DependentUpon>frm_MaintainAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Categories\frm_Category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Categories\frm_Category.Designer.cs">
+      <DependentUpon>frm_Category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Orders\frm_Orders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Orders\frm_Orders.Designer.cs">
+      <DependentUpon>frm_Orders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frm_Reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frm_Reports.Designer.cs">
+      <DependentUpon>frm_Reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Products\frm_MaintainProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Products\frm_MaintainProduct.Designer.cs">
+      <DependentUpon>frm_MaintainProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Products\frm_Products.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Products\frm_Products.Designer.cs">
+      <DependentUpon>frm_Products.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_Login.Designer.cs">
+      <DependentUpon>GUI_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_Manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_Manager.Designer.cs">
+      <DependentUpon>GUI_Manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Accounts\frm_Accounts.resx">
+      <DependentUpon>frm_Accounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounts\frm_MaintainAccount.resx">
+      <DependentUpon>frm_MaintainAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categories\frm_Category.resx">
+      <DependentUpon>frm_Category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Products\frm_MaintainProduct.resx">
+      <DependentUpon>frm_MaintainProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Products\frm_Products.resx">
+      <DependentUpon>frm_Products.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_Login.resx">
+      <DependentUpon>GUI_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_Manager.resx">
+      <DependentUpon>GUI_Manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Orders\frm_Orders.resx">
+      <DependentUpon>frm_Orders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frm_Reports.resx">
+      <DependentUpon>frm_Reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bussiness\Bussiness.csproj">
+      <Project>{17f9f610-0085-4cf2-adb9-83ff7656acff}</Project>
+      <Name>Bussiness</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{5a148fae-0c4c-4855-a874-ff235697ada3}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoOnlineFerilizer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\onlineFertilizer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
