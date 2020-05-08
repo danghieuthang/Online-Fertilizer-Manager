@@ -1,6 +1,6 @@
 # Online-Fertilizer-Manager
 Winform<br>
-Fuetures for application
+Fuetures for application:
 - Employee can login when having an account
 - Employee can Add/Update/Delete/View accounts
 - Employee can Add/Update/Delete/View Products
